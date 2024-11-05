@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Associados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="tel"], input[type="radio"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .sexo-group {
+            margin-bottom: 15px;
+        }
+        .sexo-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Associados</h1>
+        <form action="processar_cadastro.php" method="POST">
+            <label for="nome">nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+
+            <label for="Estado">Estado:</label>
+            <input type="Estado" id="Estado" name="Estado" required>
+
+            <label for="endereço">Endereço:</label>
+            <input type="text" id="endereço" name="endereço" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="cid" id="Cidade" name="Cidade" required>
+
+            <label for="plano">plano:</label>
+            <input type="plano" id="plano" name="plano" required>
+
+            <label for="descrição">Descrição:</label>
+            <input type="descrição" id="descrição" name="descrição" required>
+
+            <input type="submit" value="Cadastrar" class="submit-btn">
+        </form>
+    </div>
+
+</body>
+</html>

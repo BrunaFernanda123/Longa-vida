@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão do Associados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: blueviolet;
+        }
+        .operation-group {
+            margin-top: 20px;
+        }
+        .operation-group input[type="submit"] {
+            background-color: #FF6347;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gestão de Associados</h1>
+        
+        <!-- Formulário para Inserir Associados -->
+        <form action="inserir_associado.php" method="POST">
+            <h3>Inserir Novo associado</h3>
+            <label for="nome">Nome do associado:</label>
+            <input type="nome" id="nome" name="nome" required>
+
+            <input type="submit" value="Inserir associado" class="submit-btn">
+
+        </form>
+
+        <!-- Formulário para Alterar Associados -->
+        <form action="alterar_associado.php" method="POST">
+            <h3>Alterar Associado</h3>
+            <label for="nome_alterar">nome do Associado:</label>
+            <input type="nome" id="nome_alterar" name="nome" required>
+
+            <input type="submit" value="Alterar Associado" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Excluir Associados -->
+        <form action="excluir_associado.php" method="POST">
+            <h3>Excluir associado</h3>
+            <label for="nome_excluir">Nome do associado:</label>
+            <input type="nome" id="nome_excluir" name="nome" required>
+
+            <input type="submit" value="Excluir Cliente" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Consultar Associados -->
+        <form action="consultar_associado.php" method="GET">
+            <h3>Consultar associado</h3>
+            <label for="nome_consultar">Nome do associado:</label>
+            <input type="nome" id="nome_consultar" name="nome" required>
+
+            <input type="submit" value="Consultar associado" class="submit-btn">
+        </form>
+
+    </div>
+
+</body>
+</html>

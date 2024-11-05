@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Gestão de Planos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: blueviolet;
+        }
+        .operation-group {
+            margin-top: 20px;
+        }
+        .operation-group input[type="submit"] {
+            background-color: #FF6347;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro e Gestão de Planos</h1>
+        
+        <!-- Formulário para Inserir Plano -->
+        <form action="inserir_plano.php" method="POST">
+            <h3>Inserir Novo Plano</h3>
+            <label for="numero">Número do Plano:</label>
+            <input type="number" id="numero" name="numero" required>
+
+            <label for="descricao">Descrição do Plano:</label>
+            <input type="text" id="descricao" name="descricao" required>
+
+            <label for="valor">Valor do Plano (R$):</label>
+            <input type="number" id="valor" name="valor" step="0.01" required>
+
+            <input type="submit" value="Inserir Plano" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Alterar Plano -->
+        <form action="alterar_plano.php" method="POST">
+            <h3>Alterar Plano</h3>
+            <label for="numero_alterar">Número do Plano (para Alterar):</label>
+            <input type="number" id="numero_alterar" name="numero" required>
+
+            <label for="descricao_alterar">Nova Descrição:</label>
+            <input type="text" id="descricao_alterar" name="descricao" required>
+
+            <label for="valor_alterar">Novo Valor do Plano (R$):</label>
+            <input type="number" id="valor_alterar" name="valor" step="0.01" required>
+
+            <input type="submit" value="Alterar Plano" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Excluir Plano -->
+        <form action="excluir_plano.php" method="POST">
+            <h3>Excluir Plano</h3>
+            <label for="numero_excluir">Número do Plano (para Excluir):</label>
+            <input type="number" id="numero_excluir" name="numero" required>
+
+            <input type="submit" value="Excluir Plano" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Consultar Plano -->
+        <form action="consultar_plano.php" method="GET">
+            <h3>Consultar Plano</h3>
+            <label for="numero_consultar">Número do Plano (para Consultar):</label>
+            <input type="number" id="numero_consultar" name="numero" required>
+
+            <input type="submit" value="Consultar Plano" class="submit-btn">
+        </form>
+
+    </div>
+
+</body>
+</html>
